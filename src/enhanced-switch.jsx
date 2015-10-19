@@ -53,7 +53,7 @@ const EnhancedSwitch = React.createClass({
       labelPosition: React.PropTypes.oneOf(['left', 'right']),
       disableFocusRipple: React.PropTypes.bool,
       disableTouchRipple: React.PropTypes.bool,
-      clearFixStyle: React.PropTypes.object
+      clearFixStyle: React.PropTypes.object,
     },
 
   windowListeners: {
