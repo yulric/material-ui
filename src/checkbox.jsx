@@ -35,6 +35,7 @@ const Checkbox = React.createClass({
     labelStyle: React.PropTypes.object,
     onCheck: React.PropTypes.func,
     unCheckedIcon: React.PropTypes.element,
+    clearFixStyle: React.PropTypes.object,
   },
 
   getInitialState() {
