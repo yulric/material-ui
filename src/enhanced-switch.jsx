@@ -53,6 +53,7 @@ const EnhancedSwitch = React.createClass({
       labelPosition: React.PropTypes.oneOf(['left', 'right']),
       disableFocusRipple: React.PropTypes.bool,
       disableTouchRipple: React.PropTypes.bool,
+      clearFixStyle: React.PropTypes.object
     },
 
   windowListeners: {
@@ -298,12 +299,12 @@ const EnhancedSwitch = React.createClass({
     // Position is left if not defined or invalid.
     let elementsInOrder = (labelPositionExist &&
       (this.props.labelPosition.toUpperCase() === "RIGHT")) ? (
-        <ClearFix style={styles.controls}>
+        <ClearFix style={this.mergeStyles(styles.controls, this.props.clearFixStyle)}>
           {switchElement}
           {labelElement}
         </ClearFix>
       ) : (
-        <ClearFix style={styles.controls}>
+        <ClearFix style={this.mergeStyles(styles.controls, this.props.clearFixStyle)}>
           {labelElement}
           {switchElement}
         </ClearFix>
