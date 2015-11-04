@@ -10,7 +10,7 @@
     "test-base": "./node_modules/.bin/karma start",
     "prebuild": "rimraf lib",
     "eslint": "gulp eslint",
-    "build": "npm run eslint && babel --stage 1 ./src --out-dir ./lib",
+    "build": "npm run eslint && babel --stage 1 ./src --out-dir ./lib && npm prune --production && npm remove react && npm remove react-dom && npm remove react-tap-event-plugin && npm remove react-addons-update && npm remove react-addons-transition-group && npm remove react-addons-create-fragment && npm remove react-addons-pure-render-mixin && npm remove fbjs",
     "prepublish": "npm run build"
   },
   "keywords": [
